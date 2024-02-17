@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id="java-basic" external.linked.project.path="$MODULE_DIR$/java-basic" external.root.project.path="$MODULE_DIR$/java-basic" external.system.id="GRADLE" external.system.module.group="org.example" external.system.module.version="1.0-SNAPSHOT" type="JAVA_MODULE" version="4">
+  <component name="CheckStyle-IDEA-Module" serialisationVersion="2">
+    <option name="activeLocationsIds" />
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/java-basic">
+      <excludeFolder url="file://$MODULE_DIR$/java-basic/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/java-basic/build" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+  <component name="SonarLintModuleSettings">
+    <option name="uniqueId" value="04854733-71cd-4be2-bebf-9719842bf8d1" />
+  </component>
+</module>
