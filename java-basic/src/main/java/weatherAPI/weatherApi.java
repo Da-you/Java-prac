@@ -1,9 +1,8 @@
 package weatherAPI;
 
 
-
-
-
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -39,10 +38,27 @@ public class weatherApi {
         content.append(inputLine);
       }
       br.close();
+      System.out.println("================================");
+      System.out.println("content = " + content.toString());
+      System.out.println("================================");
 
+      /**
+       *  content.toString()을 통해 API 응답을 문자열로 변환합니다. 이 문자열은 JSON 형식의 데이터를 포함하고 있습니다.
+       *  JsonParser.parseString(content.toString())을 사용하여 Gson의 JsonParser를 통해 문자열을 JsonObject로 파싱합니다.
+       *  이렇게 하면 API 응답을 자바에서 다루기 쉬운 JSON 객체로 변환됩니다.
+       *  weatherData.getAsJsonObject("main")을 사용하여 weatherData 객체에서 "main"이라는 키를 갖는 JSON 객체를 추출합니다.
+       *  이것은 일반적으로 OpenWeatherMap API 응답에서는 주요 정보를 담고 있는 객체입니다.
+       *  mainData.get("temp").getAsDouble()을 사용하여 mainData 객체에서 "temp"라는 키를 갖는 값을 추출합니다.
+       *  이것은 해당 도시의 온도를 나타내는데, 이 값을 getAsDouble() 메서드를 통해 double 타입으로 변환하여 가져옵니다
+       *  .getAsJsonObject()는  Gson 라이브러리의 메서드로, JSON 객체에서 특정 키에 해당하는 값을 추출하기 위해 사용됩니다.
+       */
+
+      JsonObject weatherData = JsonParser.parseString(content.toString()).getAsJsonObject();
+      JsonObject mainData = weatherData.getAsJsonObject("main");
+      double temp = mainData.get("temp").getAsDouble();
 
       System.out.println("================================");
-      System.out.println("temp = " + content);
+      System.out.println("temp = " + temp);
       System.out.println("================================");
       con.disconnect();
     } catch (Exception e) {
