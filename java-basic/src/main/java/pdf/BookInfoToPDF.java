@@ -36,7 +36,7 @@ public class BookInfoToPDF {
       Document document = new Document(pdf);
       // pdf파일의 폰트를 생성하고 설정
       PdfFont font = createFont("NANUMGOTHICLIGHT.TTF", PdfEncodings.IDENTITY_H,
-          true);
+          true); // 폰트는 따로 다운 받아서 리소스 패키지에 넣어야함
       document.setFont(font);
       // 책정보가 담긴 map을 문단으로 생성 document에 추가
       for (String key : bookInfo.keySet()) {

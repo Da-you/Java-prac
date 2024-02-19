@@ -16,8 +16,16 @@ dependencies {
     implementation group: 'org.apache.poi', name: 'poi-ooxml', version: '5.2.5' // 엑셀 파일 읽기/ 생성
 
 
-    implementation group: 'com.itextpdf', name: 'kernel', version: '7.1.15'// pdf 생성 라이브러리
+    implementation group: 'com.itextpdf', name: 'kernel', version: '7.1.15'// pdf 생성 라이브러리용
     implementation group: 'com.itextpdf', name: 'layout', version: '7.1.15'
+
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.22.1'
+
+    implementation group: 'com.squareup.okhttp3', name: 'okhttp', version: '4.12.0' // http 통신
+    implementation group: 'org.apache.httpcomponents.client5', name: 'httpclient5', version: '5.3.1'
+
+    implementation group: 'org.jsoup', name: 'jsoup', version: '1.17.2' // 크롤링
+
 
 
     testImplementation platform('org.junit:junit-bom:5.9.1')
