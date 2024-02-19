@@ -15,7 +15,7 @@ import okhttp3.Response;
 
 public class KakaoBookApi {
 
-  private static final String apiKey = "key";
+  private static final String apiKey = "fd0cef618b7563588af6c3fe7ea898b4";
   private static final String apuUrl = "https://dapi.kakao.com/v3/search/book";
   private static final OkHttpClient client = new OkHttpClient();
   private static final Gson gson = new Gson();
